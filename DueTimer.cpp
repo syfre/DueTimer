@@ -46,8 +46,10 @@ const DueTimer::Timer DueTimer::Timers[NUM_TIMERS] = {
 #endif
 		
 #if NUM_TIMERS > 6
+double DueTimer::_frequency[NUM_TIMERS] = {-1,-1,-1,-1,-1,-1,-1,-1,-1};
 uint32_t DueTimer::_statusRegister[NUM_TIMERS] = {0,0,0,0,0,0,0,0};
 #else
+double DueTimer::_frequency[NUM_TIMERS] = {-1,-1,-1,-1,-1,-1,-1};
 uint32_t DueTimer::_statusRegister[NUM_TIMERS] = {0,0,0,0,0,0};
 #endif
 
